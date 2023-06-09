@@ -1,0 +1,21 @@
+.wrapper {
+  display: grid;
+  border: red solid 1px;
+  height: 100vh;
+  grid-template: 3fr 3fr 3fr / 4fr 4fr 4fr 4fr;
+}
+
+.sidebar {
+  border: blue solid 1px;
+  grid-area: 1 / 1 / 4 / 2;
+}
+
+.header {
+  border: green solid 1px;
+  grid-area: 1 / 2 / 2 / 5;
+}
+
+.main-content {
+  border: pink solid 1px;
+  grid-area: 2 / 2 / 4 / 5
+}
