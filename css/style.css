@@ -58,8 +58,7 @@ a:hover {
 }
 
 .header {
-  border: green solid 1px;
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(238, 238, 238);
   grid-area: 1 / 2 / 2 / 5;
 
 }
@@ -145,8 +144,7 @@ a:hover {
 }
 
 .main-content-container {
-  border: pink solid 1px;
-  background-color: rgb(249, 203, 211);
+  background-color: rgb(207, 207, 207);
   grid-area: 2 / 2 / 4 / 5;
 
   display: grid;
@@ -155,9 +153,6 @@ a:hover {
 }
 
 .projects {
-  border: blue solid 1px;
-  background-color: rgba(0, 0, 255, 0.294);
-  
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: max-content;
@@ -167,12 +162,32 @@ a:hover {
   justify-items: center;
 }
 
-.project-panel {
-  background-color: rgba(255, 0, 0, 0.368);
-  height: 350px;
+.project-card {
+  background-color: rgba(243, 243, 243, 0.368);
+  box-shadow: 5px 5px 3px #b0b0b0;
+  height: 250px;
   width: minmax(300px, 330px);
   border-radius: 15px;
+  padding: 30px;
 
+  transition: 0.5s;
+}
+
+.project-card:hover {
+  translate: -5px -5px;
+  box-shadow: 8px 8px 8px #b0b0b0;
+}
+
+.project-card h2 {
+  margin: 8px;
+}
+
+.project-card p {
+  margin: 8px;
+}
+
+.card-buttons {
+  border: blue solid 2px;
 }
 
 .announcements {
