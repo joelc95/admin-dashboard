@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,900;1,300&display=swap');
 
 :root {
-  
-
-  --sidebar-bg: #254441 ;
-  --header-bg: #81968F ;
-  --main-content-bg: #96BDC6;
-  --sidebar-font: #F5CB5C;
-  --sidebar-font-small: #81968F;
-
+  --sidebar-bg: #0d1521 ;
+  --header-bg: #eeeeee;
+  --main-content-bg: #d5d5d5;
+  --sidebar-font: rgb(225, 225, 225);
+  --sidebar-font-small: #e6e6e6;
+	--sidebar-font-hover: rgb(73, 126, 252);
+	--project-card: rgb(237, 237, 237);
+	--nav-a: rgb(255, 255, 255);
+	
 }
 
 * {
@@ -19,7 +20,6 @@ a, a:visited {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  
 }
 
 ul {
@@ -28,7 +28,9 @@ ul {
 
 .wrapper {
   display: grid;
-  
+	background-image: url('../assets/martin-martz-QZX54UO868g-unsplash.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
   grid-template: max-content calc(100vh) / 1fr 1fr 1fr 1fr
 }
 
@@ -43,7 +45,7 @@ ul {
 #sidebar-title {
   grid-area: 1 / 1 / 2 / 2;
   margin-top: 10%;
-  margin-left: 10%;
+  margin-left: 10px;
   margin-bottom: 10%;
   color: var(--sidebar-font);
   font-family: 'Merriweather';
@@ -60,16 +62,21 @@ a {
   color: var(--sidebar-font-small);
   padding: 4px;
   margin: 10px;
-
   transition: 0.2s;
 }
 
 .sidebar a:hover {
-  color: var(--sidebar-font);
+  color: var(--sidebar-font-hover);
 }
 
 .header {
-  background-color: var(--header-bg);
+  /* background-color: var(--header-bg); */
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.15);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
   grid-area: 1 / 2 / 2 / 5;
 
 }
@@ -97,7 +104,7 @@ a {
 }
 
 .nav-div-2 a {
-  color: #001011;
+  color: var(--nav-a);
 }
 
 .nav-div-2 img {
@@ -121,7 +128,7 @@ a {
   padding: 8px;
   margin: 3px;
   border-radius: 25px;
-  background-color: rgb(34, 138, 241);
+  background-color: rgb(176, 202, 228);
   color: white;
   transition: 0.2s;
 }
@@ -143,10 +150,12 @@ a {
 }
 
 .header input {
+	
   padding: 12px;
+	margin-left: 8px;
   border-radius: 25px;
   border: none;
-  background-color: #a0c2ca;
+  background-color: #c7c7c73b;
   transition: 0.3s;
 }
 
@@ -157,7 +166,8 @@ a {
 }
 
 .main-content-container {
-  background-color: var(--main-content-bg);
+  /* background-color: var(--main-content-bg); */
+	background-size: contain;
   grid-area: 2 / 2 / 4 / 5;
 
   display: grid;
@@ -180,12 +190,22 @@ a {
   font-family: 'Merriweather';
 }
 
+.card {
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .project-card {
-  background-color: rgba(243, 243, 243, 0.368);
-  box-shadow: 5px 5px 3px #7ba4ad;
+  /* background-color: rgba(243, 243, 243, 0.368);
+  box-shadow: 5px 5px 3px #aeaeae; */
   height: 250px;
   width: minmax(300px, 330px);
-  border-radius: 15px;
+  /* border-radius: 15px; */
   padding: 30px;
 
   transition: 0.5s;
@@ -193,7 +213,9 @@ a {
 
 .project-card:hover {
   translate: -5px -5px;
-  box-shadow: 8px 8px 8px #6698a3;
+	background: rgba(255, 255, 255, 0.242);
+  backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
   filter: brightness(115%);
   
 }
@@ -224,7 +246,5 @@ a {
 }
 
 .announcements {
-  background-color: var(--main-content-bg);
-
   grid-template-columns: 1fr;
 }
